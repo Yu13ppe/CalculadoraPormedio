@@ -1,0 +1,93 @@
+/* Estilos para el cuerpo de la página en modo oscuro */
+body {
+  background-color: #1a1a1a; /* Fondo oscuro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff; /* Texto claro */
+}
+
+/* Estilos para el contenedor en modo oscuro con efecto de neón */
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #292929; /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; /* Agrega posición relativa para posicionar el neon */
+  color: #fff; /* Texto claro */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -2px; /* Ajusta los valores para que el pseudo-elemento no cubra completamente los elementos interiores */
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #007AFF, 0 0 20px #007AFF, 0 0 30px #007AFF, 0 0 40px #007AFF, 0 0 50px #007AFF;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+/* Estilos para el título en modo oscuro */
+h1 {
+  text-align: center;
+  color: #007AFF; /* Color de texto destacado */
+}
+
+/* Estilos para el formulario */
+form {
+  margin-bottom: 20px;
+}
+
+/* Estilos para etiquetas en modo oscuro */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc; /* Texto gris claro */
+}
+
+/* Estilos para inputs en modo oscuro */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+button {
+  background-color: #007AFF;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+/* Estilos para el botón secundario en modo oscuro */
+.button-secondary {
+  background-color: #fff;
+  color: #007AFF;
+  border: 1px solid #007AFF;
+}
+
+/* Efecto de neón en modo oscuro */
+
+
+/* Animación de neón en modo oscuro */
+@keyframes neon-glow {
+  0% {
+      box-shadow: 0 0 10px #007AFF, 0 0 20px #007AFF, 0 0 30px #007AFF, 0 0 40px #007AFF, 0 0 50px #007AFF;
+  }
+  100% {
+      box-shadow: 0 0 20px #007AFF, 0 0 30px #007AFF, 0 0 40px #007AFF, 0 0 50px #007AFF, 0 0 60px #007AFF;
+  }
+}
